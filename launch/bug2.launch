@@ -1,0 +1,10 @@
+<launch>
+	<node name="stage" pkg="stage_ros" type="stageros"
+	      args="$(find lab6)/world/playground.world" />
+	<node name="bug2" pkg="lab6" type="bug2.py"
+	      args="$(find lab6)/world/playground.world" />
+	<!-- change goal_pos_x for goal's x-axis-->
+	<param name="goal_pos_x"  value= "5.5" />
+	<!-- change goal_pos_y for goal's y-axis-->
+	<param name="goal_pos_y" value= "5.5" />
+</launch>
